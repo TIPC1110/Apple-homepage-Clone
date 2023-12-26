@@ -18,10 +18,5 @@ This project is a meticulous recreation of the Apple homepage using HTML, CSS, a
 - **CSS Styling:** CSS is used to capture the iconic simplicity and sophistication of Apple's design.
 - **Bootstrap 5 Magic:** Leveraging Bootstrap 5 for additional responsiveness and styling enhancements.
 
-## How to Run
-
-1. Clone the repository: `git clone https://github.com/yourusername/Apple-Homepage-Clone.git`
-2. Open the `index.html` file in your preferred web browser.
-
 Happy coding! 🚀
 
