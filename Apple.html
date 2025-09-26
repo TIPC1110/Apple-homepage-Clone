@@ -18,12 +18,161 @@
                 <span>Apple Operations</span>
             </div>
             <nav class="sidebar-nav">
-                <a href="#" class="nav-item active"><i class="fa-solid fa-gauge"></i>Overview</a>
-                <a href="#" class="nav-item"><i class="fa-solid fa-store"></i>Retail performance</a>
-                <a href="#" class="nav-item"><i class="fa-solid fa-box"></i>Supply chain</a>
-                <a href="#" class="nav-item"><i class="fa-solid fa-mobile-screen"></i>Devices</a>
-                <a href="#" class="nav-item"><i class="fa-solid fa-headset"></i>Customer care</a>
-                <a href="#" class="nav-item"><i class="fa-solid fa-gear"></i>Settings</a>
+                <ul class="sidebar-menu">
+                    <li class="menu-item">
+                        <a href="#" class="nav-link active">
+                            <span class="nav-icon">
+                                <i class="fa-solid fa-gauge"></i>
+                            </span>
+                            <div class="nav-text">
+                                <span class="nav-label">Dashboard</span>
+                                <span class="nav-translation">Thống kê</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="menu-item dropdown open">
+                        <button class="nav-link dropdown-toggle" type="button" aria-expanded="true" aria-controls="submenu-links">
+                            <span class="nav-icon">
+                                <i class="fa-solid fa-link"></i>
+                            </span>
+                            <div class="nav-text">
+                                <span class="nav-label">Manage Links</span>
+                                <span class="nav-translation">Quản lý liên kết</span>
+                            </div>
+                            <span class="nav-caret"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <ul class="submenu" id="submenu-links">
+                            <li>
+                                <a href="#" class="submenu-link">
+                                    <span class="submenu-icon"><i class="fa-solid fa-layer-group"></i></span>
+                                    <span class="submenu-label">All Links</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="submenu-link">
+                                    <span class="submenu-icon"><i class="fa-solid fa-eye-slash"></i></span>
+                                    <span class="submenu-label">Hidden Links</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="submenu-link">
+                                    <span class="submenu-icon"><i class="fa-solid fa-circle-pause"></i></span>
+                                    <span class="submenu-label">Inactive Links</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item dropdown">
+                        <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="submenu-users">
+                            <span class="nav-icon">
+                                <i class="fa-solid fa-users"></i>
+                            </span>
+                            <div class="nav-text">
+                                <span class="nav-label">Users</span>
+                                <span class="nav-translation">Người dùng</span>
+                            </div>
+                            <span class="nav-caret"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <ul class="submenu" id="submenu-users">
+                            <li>
+                                <a href="#" class="submenu-link">
+                                    <span class="submenu-icon"><i class="fa-solid fa-rectangle-list"></i></span>
+                                    <span class="submenu-label">List</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="submenu-link">
+                                    <span class="submenu-icon"><i class="fa-solid fa-user-plus"></i></span>
+                                    <span class="submenu-label">Add</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="submenu-link">
+                                    <span class="submenu-icon"><i class="fa-solid fa-user-group"></i></span>
+                                    <span class="submenu-label">Referrals</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="submenu-link">
+                                    <span class="submenu-icon"><i class="fa-solid fa-file-export"></i></span>
+                                    <span class="submenu-label">Export</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </span>
+                            <div class="nav-text">
+                                <span class="nav-label">Reports</span>
+                                <span class="nav-translation">Báo cáo</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="menu-item dropdown">
+                        <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="submenu-settings">
+                            <span class="nav-icon">
+                                <i class="fa-solid fa-gear"></i>
+                            </span>
+                            <div class="nav-text">
+                                <span class="nav-label">Settings</span>
+                                <span class="nav-translation">Cài đặt</span>
+                            </div>
+                            <span class="nav-caret"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <ul class="submenu" id="submenu-settings">
+                            <li>
+                                <a href="#" class="submenu-link">
+                                    <span class="submenu-icon"><i class="fa-solid fa-sliders"></i></span>
+                                    <span class="submenu-label">Settings</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="submenu-link">
+                                    <span class="submenu-icon"><i class="fa-solid fa-rectangle-ad"></i></span>
+                                    <span class="submenu-label">Ads</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="submenu-link">
+                                    <span class="submenu-icon"><i class="fa-solid fa-money-check-dollar"></i></span>
+                                    <span class="submenu-label">Withdraw</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="submenu-link">
+                                    <span class="submenu-icon"><i class="fa-solid fa-envelope"></i></span>
+                                    <span class="submenu-label">Email</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="submenu-link">
+                                    <span class="submenu-icon"><i class="fa-solid fa-fingerprint"></i></span>
+                                    <span class="submenu-label">Social Login</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="submenu-link">
+                                    <span class="submenu-icon"><i class="fa-solid fa-credit-card"></i></span>
+                                    <span class="submenu-label">Payment Methods</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item logout">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                            </span>
+                            <div class="nav-text">
+                                <span class="nav-label">Logout</span>
+                                <span class="nav-translation">Đăng xuất</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </nav>
             <div class="sidebar-upgrade">
                 <p class="upgrade-title">Need more insight?</p>
@@ -281,5 +430,26 @@
             </footer>
         </main>
     </div>
+    <script>
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        dropdownToggles.forEach((toggle) => {
+            const parent = toggle.closest('.dropdown');
+            const submenu = parent.querySelector('.submenu');
+            const isInitiallyOpen = parent.classList.contains('open');
+
+            toggle.setAttribute('aria-expanded', String(isInitiallyOpen));
+            if (submenu) {
+                submenu.setAttribute('aria-hidden', String(!isInitiallyOpen));
+            }
+
+            toggle.addEventListener('click', () => {
+                const isOpen = parent.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', String(isOpen));
+                if (submenu) {
+                    submenu.setAttribute('aria-hidden', String(!isOpen));
+                }
+            });
+        });
+    </script>
 </body>
 </html>
