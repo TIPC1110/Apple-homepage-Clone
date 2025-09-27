@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./dashboard.css">
+</head>
+<body class="dark-mode">
+    <div class="dashboard" id="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="brand">
+                    <i class="fa-brands fa-apple"></i>
+                    <span class="brand-text">ctdolinks</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="sidebar-menu">
+                    <li class="menu-item">
+                        <a href="#" class="nav-link active active-main-link">
+                            <span class="nav-icon"><i class="fa-solid fa-gauge"></i></span>
+                            <div class="nav-text">
+                                <span class="nav-label">Dashboard</span>
+                                <span class="nav-translation">Thống kê</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="menu-item dropdown">
+                        <button class="nav-link dropdown-toggle" type="button" aria-expanded="false">
+                            <span class="nav-icon"><i class="fa-solid fa-link"></i></span>
+                            <div class="nav-text">
+                                <span class="nav-label">Manage Links</span>
+                                <span class="nav-translation">Quản lý liên kết</span>
+                            </div>
+                            <span class="nav-caret"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <ul class="submenu">
+                            <li><a href="#" class="submenu-link">All Links</a></li>
+                            <li><a href="#" class="submenu-link">Hidden Links</a></li>
+                            <li><a href="#" class="submenu-link">Inactive Links</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item dropdown">
+                        <button class="nav-link dropdown-toggle" type="button" aria-expanded="false">
+                            <span class="nav-icon"><i class="fa-solid fa-users"></i></span>
+                            <div class="nav-text">
+                                <span class="nav-label">Users</span>
+                                <span class="nav-translation">Người dùng</span>
+                            </div>
+                            <span class="nav-caret"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <ul class="submenu">
+                            <li><a href="#" class="submenu-link">List</a></li>
+                            <li><a href="#" class="submenu-link">Add New</a></li>
+                            <li><a href="#" class="submenu-link">Referrals</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon"><i class="fa-solid fa-chart-line"></i></span>
+                            <div class="nav-text">
+                                <span class="nav-label">Reports</span>
+                                <span class="nav-translation">Báo cáo</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon"><i class="fa-solid fa-gear"></i></span>
+                            <div class="nav-text">
+                                <span class="nav-label">Settings</span>
+                                <span class="nav-translation">Cài đặt</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-upgrade">
+                <p class="upgrade-title">Need more insight?</p>
+                <p class="upgrade-body">Enable executive highlights to see launch readiness, global stock, and store sentiment in one view.</p>
+                <button class="upgrade-btn">Activate highlights</button>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="menu-item logout">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                        <div class="nav-text">
+                            <span class="nav-label">Logout</span>
+                            <span class="nav-translation">Đăng xuất</span>
+                        </div>
+                    </a>
+                </li>
+             </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <button class="icon-btn mobile-menu-btn" aria-label="Open menu" id="mobileMenuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" placeholder="Search for reports, users, or files">
+                </div>
+                <div class="topbar-actions">
+                    <button class="icon-btn" aria-label="Notifications"><i class="fa-regular fa-bell"></i></button>
+                    <button class="icon-btn" aria-label="Toggle theme" id="themeToggleBtn"><i class="fa-regular fa-sun"></i></button>
+                    <div class="profile">
+                        <img src="https://i.pravatar.cc/100?img=32" alt="User avatar">
+                        <div>
+                            <p class="profile-name">Minh Nguyen</p>
+                            <p class="profile-role">Administrator</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <section class="welcome">
+                <h1>Good evening, Minh</h1>
+                <p>Here's your summary for today. You can find key metrics and recent activities below. Let's make it a productive day!</p>
+            </section>
+
+            <section class="stats-grid">
+                <article class="stat-card">
+                    <div class="stat-header">
+                        <p class="stat-title">Revenue</p>
+                        <span class="stat-badge positive">+12.4%</span>
+                    </div>
+                    <h2>$248,930</h2>
+                    <p class="stat-caption">Compared to last month</p>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-header">
+                        <p class="stat-title">New Users</p>
+                        <span class="stat-badge positive">+8.2%</span>
+                    </div>
+                    <h2>1,492</h2>
+                    <p class="stat-caption">Registered in last 30 days</p>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-header">
+                        <p class="stat-title">Active Links</p>
+                        <span class="stat-badge positive">+3.1%</span>
+                    </div>
+                    <h2>18,492</h2>
+                    <p class="stat-caption">Total active short links</p>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-header">
+                        <p class="stat-title">Support Cases</p>
+                        <span class="stat-badge negative">-8.5%</span>
+                    </div>
+                    <h2>126</h2>
+                    <p class="stat-caption">Pending tickets</p>
+                </article>
+            </section>
+
+            <section class="grid-layout">
+                <article class="card chart-card">
+                    <div class="card-header">
+                        <h3>Revenue Over Time</h3>
+                        <div class="chart-controls">
+                            <button>Weekly</button>
+                            <button class="active">Monthly</button>
+                            <button>Yearly</button>
+                        </div>
+                    </div>
+                    <div class="line-chart-container">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </article>
+                <article class="card activity-card">
+                    <div class="card-header">
+                        <h3>Recent Activity</h3>
+                        <a href="#">View All</a>
+                    </div>
+                    <ul class="activity-list">
+                       <li class="activity-item">
+                           <div class="activity-icon user">
+                               <i class="fa-solid fa-user-plus"></i>
+                           </div>
+                           <div class="activity-text">
+                               <p>New user <b>"alex_morgan"</b> just registered.</p>
+                               <time>5 minutes ago</time>
+                           </div>
+                       </li>
+                        <li class="activity-item">
+                           <div class="activity-icon link">
+                               <i class="fa-solid fa-link"></i>
+                           </div>
+                           <div class="activity-text">
+                               <p>A new link was created for <b>"producthunt.com"</b>.</p>
+                               <time>15 minutes ago</time>
+                           </div>
+                       </li>
+                        <li class="activity-item">
+                           <div class="activity-icon withdrawal">
+                               <i class="fa-solid fa-dollar-sign"></i>
+                           </div>
+                           <div class="activity-text">
+                               <p>Withdrawal request of <b>$250.00</b> was approved for <b>"jane_doe"</b>.</p>
+                               <time>30 minutes ago</time>
+                           </div>
+                       </li>
+                        <li class="activity-item">
+                           <div class="activity-icon user">
+                               <i class="fa-solid fa-user-plus"></i>
+                           </div>
+                           <div class="activity-text">
+                               <p>New user <b>"chris_p"</b> just registered.</p>
+                               <time>1 hour ago</time>
+                           </div>
+                       </li>
+                    </ul>
+                </article>
+            </section>
+            
+            <section class="grid-layout-secondary">
+                 <article class="card table-card">
+                     <div class="card-header">
+                        <h3>Recent Links</h3>
+                        <a href="#">View All</a>
+                    </div>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Original URL</th>
+                                    <th>Short Link</th>
+                                    <th>Clicks</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>https://dribbble.com/shots...</td>
+                                    <td>ctdo.li/design-inspiration</td>
+                                    <td>2,430</td>
+                                    <td><span class="status-pill active">Active</span></td>
+                                </tr>
+                                 <tr>
+                                    <td>https://github.com/trending</td>
+                                    <td>ctdo.li/dev-trends</td>
+                                    <td>1,892</td>
+                                    <td><span class="status-pill active">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td>https://producthunt.com/new</td>
+                                    <td>ctdo.li/new-products</td>
+                                    <td>986</td>
+                                    <td><span class="status-pill active">Active</span></td>
+                                </tr>
+                                 <tr>
+                                    <td>https://medium.com/topic/ai</td>
+                                    <td>ctdo.li/ai-reads</td>
+                                    <td>543</td>
+                                    <td><span class="status-pill pending">Pending</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+                <article class="card chart-card">
+                     <div class="card-header">
+                        <h3>Traffic Source</h3>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="trafficChart"></canvas>
+                    </div>
+                </article>
+            </section>
+            
+            <footer class="footer">
+                <p>© 2024 ctdolinks. All rights reserved.</p>
+                <div>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Support</a>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <script src="./dashboard.js" defer></script>
+</body>
+</html>
