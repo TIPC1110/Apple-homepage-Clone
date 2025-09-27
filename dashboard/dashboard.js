@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggleBtn = document.getElementById('themeToggleBtn');
   const body = document.body;
   const themeIcon = themeToggleBtn?.querySelector('i');
+
   const sidebar = document.querySelector('.sidebar');
+
 
   let isSidebarAnimating = false;
   let revenueChartInstance;
@@ -127,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+
   const setMobileSidebarState = (isOpen) => {
     if (isOpen) {
       body.classList.add('sidebar-open');
@@ -140,6 +143,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const closeSidebar = () => {
     setMobileSidebarState(false);
+
+  const closeSidebar = () => {
+    body.classList.remove('sidebar-open');
+
   };
 
   const handleSidebarToggle = () => {
@@ -150,6 +157,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isDesktop) {
       isSidebarAnimating = true;
       dashboardEl.classList.toggle('sidebar-collapsed');
+
+
+      const sidebar = document.querySelector('.sidebar');
+
       sidebar?.classList.add('is-animating');
       sidebar?.addEventListener(
         'transitionend',
@@ -160,8 +171,12 @@ document.addEventListener('DOMContentLoaded', () => {
         { once: true }
       );
     } else {
+
       const willOpen = !body.classList.contains('sidebar-open');
       setMobileSidebarState(willOpen);
+
+      body.classList.toggle('sidebar-open');
+
     }
   };
 
@@ -185,11 +200,14 @@ document.addEventListener('DOMContentLoaded', () => {
   mobileMenuBtn?.addEventListener('click', handleSidebarToggle);
   overlay?.addEventListener('click', closeSidebar);
 
+
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && body.classList.contains('sidebar-open')) {
       closeSidebar();
     }
   });
+
+
 
   document.querySelectorAll('.sidebar a').forEach((interactive) => {
     interactive.addEventListener('click', () => {
@@ -224,9 +242,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme') || 'dark';
   applyTheme(savedTheme);
 
+
   if (mobileMenuBtn) {
     setMobileSidebarState(false);
   }
+
 
   let resizeTimeout;
   window.addEventListener('resize', () => {

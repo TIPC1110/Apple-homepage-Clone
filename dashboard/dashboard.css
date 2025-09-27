@@ -435,6 +435,7 @@ body.dark-mode .main-content::before {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+
 }
 
 .mobile-menu-btn {
@@ -737,6 +738,7 @@ body.dark-mode .welcome::before {
 }
 
 
+
 .chart-card {
   display: flex;
   flex-direction: column;
@@ -781,6 +783,7 @@ body.dark-mode .welcome::before {
 .table-card td {
   font-size: 0.9rem;
   white-space: normal;
+
 }
 
 .table-card tbody tr:last-child td {
@@ -949,6 +952,7 @@ footer.footer a:hover {
     overflow-y: auto;
     overscroll-behavior: contain;
     z-index: 1001;
+
   }
 
   body.sidebar-open .sidebar {
@@ -982,7 +986,9 @@ footer.footer a:hover {
 
 @media (max-width: 720px) {
   .topbar {
+
     flex-wrap: wrap;
+
     align-items: flex-start;
   }
 
@@ -1025,6 +1031,7 @@ footer.footer a:hover {
   .stat-card {
     min-width: 220px;
   }
+
 
   .chart-card .line-chart-container {
     height: 240px;
