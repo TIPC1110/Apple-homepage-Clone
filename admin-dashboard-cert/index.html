@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple Connect Certificate Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-theme="light">
+    <div class="app">
+      <aside class="sidebar" aria-label="Sidebar navigation" aria-hidden="false">
+        <div class="sidebar__brand">
+          <button class="sidebar__menu-toggle" type="button" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <div class="sidebar__logo-group">
+            <span class="sidebar__logo">CertifyOS</span>
+            <span class="sidebar__badge">Apple Connect</span>
+          </div>
+        </div>
+        <div class="sidebar__scroll">
+          <nav class="sidebar__nav" aria-label="Primary">
+            <p class="sidebar__section">Overview</p>
+            <a class="sidebar__link sidebar__link--active" href="#">
+              <span class="sidebar__icon" aria-hidden="true">
+                <i class="fa-solid fa-chart-line"></i>
+              </span>
+              Executive Analytics
+            </a>
+            <div class="sidebar__group sidebar__group--open" data-dropdown>
+              <button
+                class="sidebar__link sidebar__link--dropdown"
+                type="button"
+                aria-expanded="true"
+              >
+                <span class="sidebar__icon" aria-hidden="true">
+                  <i class="fa-solid fa-certificate"></i>
+                </span>
+                Certificate Sales
+                <span class="sidebar__chevron" aria-hidden="true">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+              </button>
+              <div class="sidebar__submenu">
+                <a class="sidebar__sublink sidebar__sublink--active" href="#">Sales Performance</a>
+                <a class="sidebar__sublink" href="#">Product Catalog</a>
+                <a class="sidebar__sublink" href="#">Order Pipelines</a>
+                <a class="sidebar__sublink" href="#">Renewal Cohorts</a>
+              </div>
+            </div>
+            <div class="sidebar__group" data-dropdown>
+              <button
+                class="sidebar__link sidebar__link--dropdown"
+                type="button"
+                aria-expanded="false"
+              >
+                <span class="sidebar__icon" aria-hidden="true">
+                  <i class="fa-brands fa-apple"></i>
+                </span>
+                Apple Connect Ops
+                <span class="sidebar__chevron" aria-hidden="true">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+              </button>
+              <div class="sidebar__submenu">
+                <a class="sidebar__sublink" href="#">API Status</a>
+                <a class="sidebar__sublink" href="#">Sync Activity</a>
+                <a class="sidebar__sublink" href="#">Webhook Events</a>
+                <a class="sidebar__sublink" href="#">Access Control</a>
+              </div>
+            </div>
+            <div class="sidebar__group" data-dropdown>
+              <button
+                class="sidebar__link sidebar__link--dropdown"
+                type="button"
+                aria-expanded="false"
+              >
+                <span class="sidebar__icon" aria-hidden="true">
+                  <i class="fa-solid fa-bullhorn"></i>
+                </span>
+                Growth &amp; Marketing
+                <span class="sidebar__chevron" aria-hidden="true">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+              </button>
+              <div class="sidebar__submenu">
+                <a class="sidebar__sublink" href="#">Campaign Planner</a>
+                <a class="sidebar__sublink" href="#">Partner Channels</a>
+                <a class="sidebar__sublink" href="#">Creative Library</a>
+              </div>
+            </div>
+            <a class="sidebar__link" href="#">
+              <span class="sidebar__icon" aria-hidden="true">
+                <i class="fa-solid fa-gear"></i>
+              </span>
+              Platform Settings
+            </a>
+          </nav>
+          <div class="sidebar__upgrade" aria-label="Upgrade promotion">
+            <h3>Realtime Apple Connect</h3>
+            <p>
+              Upgrade to live sync for instant device registration, automated
+              certificate renewal, and proactive compliance alerts.
+            </p>
+            <button type="button">Enable Live Sync</button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="workspace">
+        <header class="topbar">
+          <button class="topbar__menu" type="button" aria-label="Toggle sidebar">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <form class="search" role="search">
+            <label for="search" class="visually-hidden">Search</label>
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input id="search" type="search" placeholder="Search dashboards, orders, or teams" />
+          </form>
+          <div class="topbar__actions">
+            <button class="topbar__button" type="button" aria-label="View notifications">
+              <i class="fa-regular fa-bell"></i>
+            </button>
+            <button class="topbar__button" type="button" aria-label="Open support chat">
+              <i class="fa-regular fa-life-ring"></i>
+            </button>
+            <button
+              class="topbar__button"
+              type="button"
+              data-theme-toggle
+              aria-label="Switch to dark mode"
+              aria-pressed="false"
+            >
+              <i class="fa-solid fa-moon" aria-hidden="true"></i>
+            </button>
+            <div class="avatar" role="button" tabindex="0" aria-haspopup="true" aria-label="Open profile menu">
+              <img src="https://i.pravatar.cc/100?img=47" alt="Operations lead" />
+              <span>
+                <strong>Mai Nguyen</strong>
+                <small>Operations Lead</small>
+              </span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </div>
+          </div>
+        </header>
+
+        <main class="main">
+          <section class="main__header">
+            <div>
+              <h1>Apple Certificate Analytics</h1>
+              <p>Monitor commerce performance, developer adoption, and API health.</p>
+            </div>
+            <button class="primary" type="button">
+              <i class="fa-solid fa-download"></i>
+              Export Insights
+            </button>
+          </section>
+
+          <section class="stats">
+            <article class="stat-card">
+              <div class="stat-card__icon">
+                <i class="fa-solid fa-receipt"></i>
+              </div>
+              <div class="stat-card__meta">
+                <h2>$218K</h2>
+                <p>Certificate revenue</p>
+                <span class="stat-card__delta stat-card__delta--up">
+                  <i class="fa-solid fa-arrow-trend-up"></i>
+                  12.4% vs last week
+                </span>
+              </div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-card__icon">
+                <i class="fa-solid fa-ticket"></i>
+              </div>
+              <div class="stat-card__meta">
+                <h2>1,842</h2>
+                <p>Certificates activated</p>
+                <span class="stat-card__delta stat-card__delta--up">
+                  <i class="fa-solid fa-arrow-trend-up"></i>
+                  6.8% conversion uplift
+                </span>
+              </div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-card__icon">
+                <i class="fa-solid fa-people-group"></i>
+              </div>
+              <div class="stat-card__meta">
+                <h2>928</h2>
+                <p>Team seats provisioned</p>
+                <span class="stat-card__delta stat-card__delta--down">
+                  <i class="fa-solid fa-arrow-trend-down"></i>
+                  1.9% churn rate
+                </span>
+              </div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-card__icon">
+                <i class="fa-solid fa-server"></i>
+              </div>
+              <div class="stat-card__meta">
+                <h2>99.98%</h2>
+                <p>Apple Connect uptime</p>
+                <span class="stat-card__delta stat-card__delta--up">
+                  <i class="fa-solid fa-arrow-trend-up"></i>
+                  +54 resolved incidents
+                </span>
+              </div>
+            </article>
+          </section>
+
+          <section class="grid">
+            <article class="panel panel--chart">
+              <header class="panel__header">
+                <div>
+                  <h3>Sales trajectory</h3>
+                  <p>Daily certificate activations &amp; upgrades</p>
+                </div>
+                <button class="panel__action" type="button">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </button>
+              </header>
+              <div class="chart chart--bar" role="img" aria-label="Bar chart showing the past seven days of sales"></div>
+              <footer class="panel__footer">
+                <div>
+                  <span class="badge badge--success">+18.2%</span>
+                  <p>Momentum continues with a new high on Tuesday.</p>
+                </div>
+                <ul class="legend">
+                  <li><span class="legend__swatch legend__swatch--primary"></span>New sales</li>
+                  <li><span class="legend__swatch legend__swatch--secondary"></span>Renewals</li>
+                </ul>
+              </footer>
+            </article>
+            <article class="panel panel--donut">
+              <header class="panel__header">
+                <div>
+                  <h3>Channel mix</h3>
+                  <p>Acquisition sources this week</p>
+                </div>
+                <button class="panel__action" type="button">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </button>
+              </header>
+              <div class="chart chart--donut" role="img" aria-label="Donut chart showing channel distribution">
+                <div class="chart--donut__ring"></div>
+                <div class="chart--donut__label">
+                  <strong>100%</strong>
+                  <span>Orders</span>
+                </div>
+              </div>
+              <div class="channel-list">
+                <div class="channel-list__item">
+                  <span class="channel-list__swatch channel-list__swatch--primary"></span>
+                  <div>
+                    <h4>Apple Developer Portal</h4>
+                    <p>Direct license purchases from Apple partners</p>
+                  </div>
+                  <strong>38%</strong>
+                </div>
+                <div class="channel-list__item">
+                  <span class="channel-list__swatch channel-list__swatch--secondary"></span>
+                  <div>
+                    <h4>Affiliate Partners</h4>
+                    <p>Authorized agencies reselling certificates</p>
+                  </div>
+                  <strong>26%</strong>
+                </div>
+                <div class="channel-list__item">
+                  <span class="channel-list__swatch channel-list__swatch--tertiary"></span>
+                  <div>
+                    <h4>Enterprise Sales</h4>
+                    <p>Custom Apple Connect deployments</p>
+                  </div>
+                  <strong>22%</strong>
+                </div>
+                <div class="channel-list__item">
+                  <span class="channel-list__swatch channel-list__swatch--quaternary"></span>
+                  <div>
+                    <h4>Self-Serve Trials</h4>
+                    <p>Upgrades from developer sandbox provisioning</p>
+                  </div>
+                  <strong>14%</strong>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="grid grid--two">
+            <article class="panel">
+              <header class="panel__header">
+                <div>
+                  <h3>Recent certificate orders</h3>
+                  <p>Top enterprise customers in the last 48 hours</p>
+                </div>
+                <button class="panel__action" type="button">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </button>
+              </header>
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Company</th>
+                      <th>Bundle ID</th>
+                      <th>Order value</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="table__cell">
+                          <span class="avatar avatar--small">
+                            <img src="https://i.pravatar.cc/80?img=12" alt="" />
+                          </span>
+                          Horizon Labs
+                        </div>
+                      </td>
+                      <td>com.horizon.passport</td>
+                      <td>$18,400</td>
+                      <td><span class="badge badge--success">Provisioned</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="table__cell">
+                          <span class="avatar avatar--small">
+                            <img src="https://i.pravatar.cc/80?img=32" alt="" />
+                          </span>
+                          Aurora Security
+                        </div>
+                      </td>
+                      <td>com.aurora.vault</td>
+                      <td>$12,950</td>
+                      <td><span class="badge badge--pending">Awaiting CSR</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="table__cell">
+                          <span class="avatar avatar--small">
+                            <img src="https://i.pravatar.cc/80?img=25" alt="" />
+                          </span>
+                          Delta Robotics
+                        </div>
+                      </td>
+                      <td>com.delta.robotics</td>
+                      <td>$9,780</td>
+                      <td><span class="badge badge--success">Provisioned</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="table__cell">
+                          <span class="avatar avatar--small">
+                            <img src="https://i.pravatar.cc/80?img=54" alt="" />
+                          </span>
+                          Pangea Airlines
+                        </div>
+                      </td>
+                      <td>air.pangea.mobile</td>
+                      <td>$15,200</td>
+                      <td><span class="badge badge--warning">Awaiting Apple</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+            <article class="panel">
+              <header class="panel__header">
+                <div>
+                  <h3>Apple Connect API health</h3>
+                  <p>Realtime sync queues &amp; response latency</p>
+                </div>
+                <button class="panel__action" type="button">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </button>
+              </header>
+              <ul class="status-list">
+                <li>
+                  <div>
+                    <h4>Certificates endpoint</h4>
+                    <p>Last 5 minutes</p>
+                  </div>
+                  <div class="status-list__metric">
+                    <strong>182 ms</strong>
+                    <span class="badge badge--success">Operational</span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4>Device registrations</h4>
+                    <p>Queued for sync</p>
+                  </div>
+                  <div class="status-list__metric">
+                    <strong>16</strong>
+                    <span class="badge badge--pending">Monitoring</span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4>Webhook delivery</h4>
+                    <p>Last 24h success rate</p>
+                  </div>
+                  <div class="status-list__metric">
+                    <strong>99.2%</strong>
+                    <span class="badge badge--success">Healthy</span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4>Scheduled renewals</h4>
+                    <p>Next maintenance window</p>
+                  </div>
+                  <div class="status-list__metric">
+                    <strong>03:00 UTC</strong>
+                    <span class="badge badge--warning">Heads-up</span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+          </section>
+
+          <section class="panel panel--activity">
+            <header class="panel__header">
+              <div>
+                <h3>Activity timeline</h3>
+                <p>Live Apple Connect sync events</p>
+              </div>
+              <button class="panel__action" type="button">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+            </header>
+            <ol class="timeline">
+              <li>
+                <span class="timeline__dot timeline__dot--success"></span>
+                <div>
+                  <h4>New MDM certificate issued</h4>
+                  <p>Issued to Aurora Security for bundle com.aurora.vault</p>
+                  <time datetime="2024-03-18T10:24">10:24 AM</time>
+                </div>
+              </li>
+              <li>
+                <span class="timeline__dot timeline__dot--info"></span>
+                <div>
+                  <h4>Device enrollment sync</h4>
+                  <p>19 devices pushed to Apple Configurator via API</p>
+                  <time datetime="2024-03-18T09:51">9:51 AM</time>
+                </div>
+              </li>
+              <li>
+                <span class="timeline__dot timeline__dot--warning"></span>
+                <div>
+                  <h4>CSR validation pending</h4>
+                  <p>Awaiting signed CSR from Pangea Airlines team</p>
+                  <time datetime="2024-03-18T09:12">9:12 AM</time>
+                </div>
+              </li>
+              <li>
+                <span class="timeline__dot timeline__dot--info"></span>
+                <div>
+                  <h4>Webhook retries resolved</h4>
+                  <p>27 deferred deliveries replayed successfully</p>
+                  <time datetime="2024-03-18T08:37">8:37 AM</time>
+                </div>
+              </li>
+            </ol>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div class="backdrop" data-backdrop></div>
+
+    <script>
+      const body = document.body;
+      const sidebar = document.querySelector('.sidebar');
+      const backdrop = document.querySelector('[data-backdrop]');
+      const menuToggles = [
+        ...document.querySelectorAll('.topbar__menu, .sidebar__menu-toggle')
+      ];
+      const dropdownGroups = document.querySelectorAll('[data-dropdown]');
+      const themeToggle = document.querySelector('[data-theme-toggle]');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+      const THEME_STORAGE_KEY = 'tailadmin-theme';
+
+      function toggleSidebar() {
+        if (window.innerWidth > 1024) return;
+        const visible = !sidebar.classList.contains('sidebar--visible');
+        sidebar.classList.toggle('sidebar--visible', visible);
+        sidebar.setAttribute('aria-hidden', visible ? 'false' : 'true');
+        backdrop.classList.toggle('backdrop--visible', visible);
+      }
+
+      menuToggles.forEach((button) => {
+        button.addEventListener('click', toggleSidebar);
+      });
+
+      backdrop.addEventListener('click', () => {
+        if (sidebar.classList.contains('sidebar--visible')) {
+          sidebar.classList.remove('sidebar--visible');
+          sidebar.setAttribute('aria-hidden', 'true');
+          backdrop.classList.remove('backdrop--visible');
+        }
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 1024) {
+          sidebar.classList.remove('sidebar--visible');
+          sidebar.setAttribute('aria-hidden', 'false');
+          backdrop.classList.remove('backdrop--visible');
+        } else {
+          const isVisible = sidebar.classList.contains('sidebar--visible');
+          sidebar.setAttribute('aria-hidden', isVisible ? 'false' : 'true');
+        }
+      });
+
+      dropdownGroups.forEach((group) => {
+        const button = group.querySelector('button');
+        button.addEventListener('click', () => {
+          const isOpen = group.classList.toggle('sidebar__group--open');
+          button.setAttribute('aria-expanded', String(isOpen));
+        });
+      });
+
+      function applyTheme(mode, persist = true) {
+        const resolvedMode = mode === 'dark' ? 'dark' : 'light';
+        body.classList.toggle('dark', resolvedMode === 'dark');
+        body.setAttribute('data-theme', resolvedMode);
+
+        if (themeToggle) {
+          themeToggle.setAttribute('aria-pressed', String(resolvedMode === 'dark'));
+          themeToggle.setAttribute(
+            'aria-label',
+            resolvedMode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+          );
+
+          const icon = themeToggle.querySelector('i');
+          if (icon) {
+            icon.classList.toggle('fa-sun', resolvedMode === 'dark');
+            icon.classList.toggle('fa-moon', resolvedMode !== 'dark');
+          }
+        }
+
+        if (persist) {
+          localStorage.setItem(THEME_STORAGE_KEY, resolvedMode);
+        }
+      }
+
+      function initTheme() {
+        const stored = localStorage.getItem(THEME_STORAGE_KEY);
+
+        if (stored === 'dark' || stored === 'light') {
+          applyTheme(stored, false);
+          return;
+        }
+
+        applyTheme(prefersDark.matches ? 'dark' : 'light', false);
+      }
+
+      if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+          const nextMode = body.classList.contains('dark') ? 'light' : 'dark';
+          applyTheme(nextMode);
+        });
+      }
+
+      prefersDark.addEventListener('change', (event) => {
+        if (!localStorage.getItem(THEME_STORAGE_KEY)) {
+          applyTheme(event.matches ? 'dark' : 'light', false);
+        }
+      });
+
+      if (window.innerWidth <= 1024) {
+        sidebar.setAttribute('aria-hidden', 'true');
+      }
+
+      initTheme();
+    </script>
+  </body>
+</html>
